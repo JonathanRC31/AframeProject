@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.2/dist/aframe-physics-system.min.js"></script>
+    <script src="script.js"></script>
+    <script src="kinema.js"></script>
+    <script src="ball.js"></script>
+    <script src="carousel.js"></script>
+    <script src="balloon.js"></script>
+    <script src="booth.js"></script>
+    <script src="ballpit.js"></script>
+    <script src="dart.js"></script>
+	<script src="ride.js"></script>
+	<script src="target.js"></script>
+	<script src="mole.js"></script>
+	<script src="game1.js"></script>
+	<script src="scorebox.js"></script>
+	<script src="cup.js"></script>
+	<script src="scoreball.js"></script>
+  </head>
+  <body>
+    <a-scene physics="debug: false">
+    <a-assets>
+      <img src="target.png" id="crosshairs"/>
+      <img src="carnivalDrape.jpg" id="drape"/>
+      <img src="youwin.png" id="WinScreen"/>
+    </a-assets>
+
+
+    <a-box wireframe=true id="leg" position="0 -4 0">
+      <a-box id="target" src="#crosshairs" position="0 1 0" depth="0.1" ></a-box>
+	  <a-box id="target" src="#crosshairs" position="0 -1 0" depth="0.1" ></a-box>
+    </a-box>
+
+
+    <!-- Floor -->
+    <a-plane static-body color="green" rotation="-90 0 0" side="double" width="100" height="100" opacity="0.5"></a-plane>
+
+    <a-entity id="cameraRig" movement-controls="fly: true; speed: 0.7" position="0 1.6 0">
+      <a-camera id="camera" kinema-body="radius: 0.8">
+        <a-cursor>
+		  <a-text id="ticketsText" position="-3.5 1.5 -1" value="Tickets: " color="black"></a-text>
+		  <a-image src="ticket.png" position="-2.3 1.5 -1" scale="0.25 0.25 0.25"></a-image>
+		  <a-text id="keyText" position="-3.5 0.9 -1" value="Key: " color="black"></a-text>
+		  <a-image src="key.jpg" position="-2.5 0.9 -1" scale="0.25 0.25 0.25"></a-image>
+		  <a-text id="pointsText" position="-3.5 1.2 -1" value='Points: ' color="black" ></a-text>
+		  <a-image id="winImage" src="youwin.png" position="1000 1000 1000" scale="2 2 2" opacity="0"></a-image>
+		</a-cursor>
+      </a-camera>
+    </a-entity>
+	
+    </a-scene>
+  </body>
+</html>
