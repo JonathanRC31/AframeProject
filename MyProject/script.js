@@ -318,12 +318,12 @@ function balloonPop(){
    let z = -6;
    if(locations.length > 0){
 	let good_position_found = false;
-	 while(!good_position_found){
+	while(!good_position_found){
 	 x = rnd(-3,-7);
 	 y = rnd(2,4);
 	 good_position_found = true;
-     for(let locs of locations){
-       let x2 = locs.x
+         for(let locs of locations){
+           let x2 = locs.x
 	   let y2 = locs.y
 	   if(distanceXY(x,y,x2,y2) < 1){
 	   	   good_position_found = false;
