@@ -155,12 +155,12 @@ function loop(){
   if(dart) dart.fly();
   for(let balloon of popBalloons){
 	balloon.scale(0.7);
-    if(distance(dart.obj,balloon.obj) < 0.5){
+    if(distance(dart.obj,balloon.obj) < 0.5 && balloon.visible){
 	  points += 1;
 	  count1 += 1;
 	  scoreCount();
 	  console.log(points);
-	  //balloon.visible = false;
+	  balloon.visible = false;
 	  balloon.obj.setAttribute("position","1000 0 1000");
     }
 	if(count1 == 5){
