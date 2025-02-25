@@ -20,15 +20,6 @@ let scoreBall1;
 let targets = [];
 let movingTargets = [];
 let cups = [];
-let carousel;
-let ride1;
-let ride2;
-let ride3;
-let ride4;
-let ride5;
-let ride6;
-let ride7;
-let ride8;
 
 window.onload = function(){
   scene = document.querySelector("a-scene");
@@ -94,15 +85,15 @@ window.onload = function(){
   }
   
   
-  carousel = new Carousel(-20,-0.5,-20);
-  ride1 = new Ride(-20,3,-18);
-  ride2 = new Ride(-12,6,-18);
-  ride3 = new Ride(-28,7,-18);
-  ride4 = new Ride(-9,15,-18);
-  ride5 = new Ride(-31,15,-18);
-  ride6 = new Ride(-12,25,-18);
-  ride7 = new Ride(-28,25,-18);
-  ride8 = new Ride(-20,27,-18);
+  let carousel = new Carousel(-20,-0.5,-20);
+  let ride1 = new Ride(-20,3,-18);
+  let ride2 = new Ride(-12,6,-18);
+  let ride3 = new Ride(-28,7,-18);
+  let ride4 = new Ride(-9,15,-18);
+  let ride5 = new Ride(-31,15,-18);
+  let ride6 = new Ride(-12,25,-18);
+  let ride7 = new Ride(-28,25,-18);
+  let ride8 = new Ride(-20,27,-18);
 
 
   dart = new Dart();
