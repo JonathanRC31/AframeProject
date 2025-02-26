@@ -164,7 +164,7 @@ function loop(){
 	  balloon.obj.setAttribute("position","1000 0 1000");
     }
 	if(count1 == 5){
-	  count = 0;
+	  count1 = 0;
 	  balloonPop();
 	}
   }
@@ -179,7 +179,7 @@ function loop(){
 	  cup.obj.setAttribute("dynamic-body","");
     }
 	if(count2 >= 6){
-	  count = 0;
+	  count2 = 0;
 	  cupLines();
 	}
   }
@@ -204,7 +204,7 @@ function loop(){
 	  target.visible = false;
 	  target.obj.setAttribute("position","1000 0 1000");
 	  if(count3 == 4){
-	    count = 0;
+	    count3 = 0;
 	    routeTargets();
 	  }
     }
