@@ -120,18 +120,11 @@ window.onload = function(){
   }
   
   balloonPop(); //popable balloons
-  routeTargets();
-  cupLines();
+  routeTargets(); //Moving targets
+  randMole(); //wack-a-mole
+  cupLines(); //stacked cups
   let cupHolder1 = new Scorebox(-20.5,1.5,-5);
   let cupHolder2 = new Scorebox(-21.5,1.5,-5);
-  
-  for(let i = 0; i < 1; i++){ //wack-a-mole
-   let x = -13;
-   let y = 1;
-   let z = -5;
-   
-   moles.push( new Mole(x,y,z));
-  }
   
   let ballpit = new Ballpit(-15,-0.5,15);
   
@@ -250,7 +243,7 @@ function loop(){
 	  let z = rnd(-4,-6);
 	  points += 1;
 	  mole.obj.setAttribute("position","1000 0 1000");
-	  new Mole(x,1,z)
+	  randMole();
     }
   }
 
@@ -373,4 +366,11 @@ function routeTargets(){
    locations.push({x:x,y:y});
    movingTargets.push( new Target(x,y,z));
   }
+}
+function randMole(){
+   moles = [];
+   let x = -13;
+   let y = 1;
+   let z = -5;
+   moles.push( new Mole(x,y,z));
 }
