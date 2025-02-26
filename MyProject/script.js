@@ -103,6 +103,9 @@ window.onload = function(){
 	if(e.key == "q"){
 	   translatePoints();
 	}
+	if(e.key == "p"){
+	   points += 1000;
+	}
   })
 
   points = 0;
