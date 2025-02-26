@@ -244,22 +244,15 @@ function loop(){
 	scoreBall1.obj.setAttribute("dynamic-body","");
   }
 
-
-  
-
   for(let mole of moles){
     if(distance(dart.obj,mole.obj) < 0.5){
 	  let x = rnd(-12,-14);
 	  let z = rnd(-4,-6);
-	  new Mole(x,1,z)
+	  points += 1;
 	  mole.obj.setAttribute("position","1000 0 1000");
+	  new Mole(x,1,z)
     }
   }
-  
-
-
-
-  
 
   window.requestAnimationFrame( loop );
 }
