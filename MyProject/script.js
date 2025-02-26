@@ -6,7 +6,6 @@ let popBalloons = [];
 let dart;
 let booths = [];
 let ride;
-let mole;
 let moles = [];
 let locations = [];
 let points;
@@ -133,7 +132,6 @@ window.onload = function(){
    
    moles.push( new Mole(x,y,z));
   }
-  //let mole = new Mole(-13,1,-5);
   
   let ballpit = new Ballpit(-15,-0.5,15);
   
@@ -254,7 +252,7 @@ function loop(){
 	  let x = rnd(-12,-14);
 	  let z = rnd(-4,-6);
 	  new Mole(x,1,z)
-	  console.log(2);
+	  mole.obj.setAttribute("position","1000 0 1000");
     }
   }
   
