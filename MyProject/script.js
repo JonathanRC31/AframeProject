@@ -100,7 +100,7 @@ window.onload = function(){
   let ride6 = new Ride(-12,25,-18);
   let ride7 = new Ride(-28,25,-18);
   let ride8 = new Ride(-20,27,-18);
-  let ladder1 = new Ladder(-20,3,-16);
+  let ladder1 = new Ladder(-20,3,-15.75);
 
 
   dart = new Dart();
