@@ -14,6 +14,7 @@ let carnivalKey;
 let count1;
 let count2;
 let count3;
+let count4;
 let game1;
 let scoreBall1;
 let targets = [];
@@ -376,5 +377,9 @@ function randMole(){
    let x = -13;
    let y = 1;
    let z = -5;
+   if(count4 >= 1){
+     let x = rnd(-12,-14);
+     let z = rnd(-4,-6);
+   }
    moles.push( new Mole(x,y,z));
 }
