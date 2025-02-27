@@ -111,6 +111,7 @@ window.onload = function(){
 	}
 	if(e.key == "p"){
 	   points += 1000;
+	   scoreCount();
 	}
   })
   
@@ -244,6 +245,7 @@ function loop(){
 	  let x = rnd(-12,-14);
 	  let z = rnd(-4,-6);
 	  points += 1;
+	  scoreCount();
 	  mole.obj.setAttribute("position","1000 0 1000");
 	  randMole();
     }
