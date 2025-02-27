@@ -4,7 +4,7 @@ class Ladder{
 
     for(let i = 0; i < 8; i++){
       let steps = document.createElement("a-cylinder");
-      steps.setAttribute("position",{x:0,y:-3 + 1 + (i * 0.5),z:0});
+      steps.setAttribute("position",{x:0,y:-3.5 + 1 + (i * 0.5),z:0});
       steps.setAttribute("rotation",{x:0,y:0,z:90});
       steps.setAttribute("radius",0.075);
       steps.setAttribute("color","gray")
