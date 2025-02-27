@@ -191,6 +191,7 @@ function loop(){
   for(let target of movingTargets){
 	target.spin();
 	target.scale(0.5);
+	target.route();
     if(distance(dart.obj,target.obj) < 0.5 && target.visible){
 	  points += 1;
 	  count3 += 1;
