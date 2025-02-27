@@ -15,7 +15,7 @@ class Ladder{
 	
     for(let i = 0; i < 2; i++){
       let handles = document.createElement("a-cylinder");
-      handles.setAttribute("position",{x:1 + (-i * 2),y:2,z:2.5});
+      handles.setAttribute("position",{x:1 + (-i * 2),y:-2,z:2.5});
       handles.setAttribute("radius",0.15);
       handles.setAttribute("color","gray")
       handles.setAttribute("height",4);
