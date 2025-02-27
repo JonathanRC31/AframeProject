@@ -27,7 +27,14 @@ window.onload = function(){
   points_Text = document.getElementById("pointsText");
   key_Text = document.getElementById("keyText");
   win_Image = document.getElementById("winImage");
-  
+
+  points = 0;
+  tickets = 0;
+  carnivalKey = 0;
+  count1 = 0;
+  count2 = 0;
+  count3 = 0;
+	
   for(let i = 0; i < 20; i++){ //targets
    let x = rnd(-20,20);
    let y = 15;
@@ -83,7 +90,6 @@ window.onload = function(){
    balloons.push( new Balloon(x,y,z));
   }
   
-  
   let carousel = new Carousel(-20,-0.5,-20);
   let ride1 = new Ride(-20,3,-18);
   let ride2 = new Ride(-12,6,-18);
@@ -107,13 +113,6 @@ window.onload = function(){
 	   points += 1000;
 	}
   })
-
-  points = 0;
-  tickets = 0;
-  carnivalKey = 0;
-  count1 = 0;
-  count2 = 0;
-  count3 = 0;
   
   for(let i = 0; i < 4; i++){ //game booths
    let x = -5 + (-i * 8);
