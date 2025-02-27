@@ -5,7 +5,8 @@ class Target{
 	this.visible = true;
 
     this.z = 0;
-    this.dz = 1 
+    this.dz = 1;
+    this.dx = 0.5;
 	
     this.obj.setAttribute("position",{x:x,y:y,z:z});
     scene.append(this.obj);
@@ -18,5 +19,14 @@ class Target{
   }
   scale(size){
     this.obj.setAttribute("scale",{x:size,y:size,z:size});
+  }
+  route(){
+    if(this.x == -27){
+      this.x += this.dx;
+    }
+    if(this.x == -31){
+      this.x -= this.dx;
+    }
+    this.obj.setAttribute("position",{x:this.x, y:this.y, z:this.z});
   }
 }
