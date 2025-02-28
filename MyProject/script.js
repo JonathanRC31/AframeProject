@@ -20,7 +20,7 @@ let scoreBall1;
 let targets = [];
 let movingTargets = [];
 let cups = [];
-let ladder;
+let ladder1;
 
 window.onload = function(){
   scene = document.querySelector("a-scene");
@@ -29,7 +29,6 @@ window.onload = function(){
   points_Text = document.getElementById("pointsText");
   key_Text = document.getElementById("keyText");
   win_Image = document.getElementById("winImage");
-  //camera_POV = document.getElementById("cameraRig");
 
   points = 0;
   tickets = 0;
@@ -102,7 +101,7 @@ window.onload = function(){
   let ride6 = new Ride(-12,25,-18);
   let ride7 = new Ride(-28,25,-18);
   let ride8 = new Ride(-20,27,-18);
-  ladder = new Ladder(-20,3,-15.75);
+  ladder1 = new Ladder(-20,3,-15.75);
 
 
   dart = new Dart();
@@ -151,10 +150,6 @@ window.onload = function(){
 
 function loop(){
   if(dart) dart.fly();
-
-  //if(distance(camera_POV.obj,ladder.obj) < 0.5){
-  //  camera_POV.obj.setAttribute("position","-20 26 -18");
-  //}
 
   for(let balloon of popBalloons){
 	balloon.scale(0.7);
