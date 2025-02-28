@@ -37,7 +37,7 @@ window.onload = function(){
   count3 = 0;
 	
   for(let i = 0; i < 50; i++){ //targets
-   let x = rnd(-30,30);
+   let x = rnd(-60,30);
    let y = rnd(12,18);
    let z = rnd(-30,30);
    if(locations.length > 0){
@@ -61,14 +61,14 @@ window.onload = function(){
   }
   
   for(let i = 0; i < 50; i++){ //balls
-   let x = rnd(-30,30);
+   let x = rnd(-60,30);
    let y = 15;
    let z = rnd(-30,30);
    balls.push( new Ball(x,y,z));
   }
 
   for(let i = 0; i < 20; i++){ //normal ballons
-   let x = rnd(-30,30);
+   let x = rnd(-60,30);
    let y = rnd(10,20);
    let z = rnd(-30,30);
    if(locations.length > 0){
