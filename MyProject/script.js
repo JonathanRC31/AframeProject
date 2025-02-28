@@ -20,7 +20,6 @@ let scoreBall1;
 let targets = [];
 let movingTargets = [];
 let cups = [];
-let ladder1;
 
 window.onload = function(){
   scene = document.querySelector("a-scene");
@@ -101,7 +100,7 @@ window.onload = function(){
   let ride6 = new Ride(-12,25,-18);
   let ride7 = new Ride(-28,25,-18);
   let ride8 = new Ride(-20,27,-18);
-  ladder1 = new Ladder(-20,3,-15.75);
+  let ladder1 = new Ladder(-20,3,-15.75);
 
 
   dart = new Dart();
@@ -150,7 +149,6 @@ window.onload = function(){
 
 function loop(){
   if(dart) dart.fly();
-
   for(let balloon of popBalloons){
 	balloon.scale(0.7);
     if(distance(dart.obj,balloon.obj) < 0.5 && balloon.visible){
@@ -244,6 +242,7 @@ function loop(){
 	scoreBall1.obj.setAttribute("position","4 6 -6");
 	scoreBall1.obj.setAttribute("dynamic-body","");
   }
+
   for(let mole of moles){
     if(distance(dart.obj,mole.obj) < 0.5){
 	  let x = rnd(-12,-14);
