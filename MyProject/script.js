@@ -29,7 +29,7 @@ window.onload = function(){
   points_Text = document.getElementById("pointsText");
   key_Text = document.getElementById("keyText");
   win_Image = document.getElementById("winImage");
-  camera_POV = document.getElementById("cameraRig");
+  //camera_POV = document.getElementById("cameraRig");
 
   points = 0;
   tickets = 0;
@@ -152,9 +152,9 @@ window.onload = function(){
 function loop(){
   if(dart) dart.fly();
 
-  if(distance(camera_POV.obj,ladder.obj) < 0.5){
-    camera_POV.obj.setAttribute("position","-20 26 -18");
-  }
+  //if(distance(camera_POV.obj,ladder.obj) < 0.5){
+  //  camera_POV.obj.setAttribute("position","-20 26 -18");
+  //}
 
   for(let balloon of popBalloons){
 	balloon.scale(0.7);
